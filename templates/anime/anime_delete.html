@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <h2>Delete Blog</h2>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+  {{form|crispy}}
+    <p>Are you sure you want to delete?</p>
+    <input type="submit" value="Yes">
+     <button><a href="{% url 'anime_detail' anime.pk %}">Cancel</a></button> 
+  </form>
+{% endblock content %}

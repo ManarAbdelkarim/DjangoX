@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    
 
     # Third-party
     'allauth',
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'pages',
+    'anime_lover'
 ]
 
 # MIDDLEWARE
