@@ -7,7 +7,7 @@ from django.urls import reverse
 class Anime(models.Model):
     title = models.CharField(max_length=100)
     author = models.ForeignKey(get_user_model(), on_delete= CASCADE)
-    image = models.ImageField(upload_to='static/images')
+    image = models.ImageField(upload_to='static/images', null = True)
     description = models.TextField(default='an awesome anime series')
 
     def __str__(self):

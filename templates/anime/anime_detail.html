@@ -3,8 +3,12 @@
 {% block content%}
 
 <h1>title :{{anime.title}}</h1>
-<img src="../{{anime.image}}" alt="" >
-<p>purchaser :{{anime.author}}</p>
+{% if var1 %}
+    <img src="{{anime.image.url}}" alt="" >
+{% endif %}
+{% if var1 %}
+<p>author :{{anime.author.username}}</p>
+{% endif %}
 <p>description :{{anime.description}}</p>
 
 <button><a href="{% url 'anime_update' anime.pk%}">update</a></button>
